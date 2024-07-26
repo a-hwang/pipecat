@@ -5,6 +5,30 @@ All notable changes to **pipecat** will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- Transports now allow you to register event handlers without decorators.
+
+### Changed
+
+- `StartFrame` is now a control frame similar to `EndFrame`.
+
+- `DeepgramTTSService` now is more customizable. You can adjust the encoding and
+  sample rate.
+
+### Fixed
+
+- RTVI's `bot-ready` message is now sent when the RTVI pipeline is ready and
+  a first participant joins.
+
+- Fixed a `BaseInputTransport` issue that was causing incoming system frames to
+  be queued instead of being pushed immediately.
+
+- Fixed a `BaseInputTransport` issue that was causing start/stop interruptions
+  incoming frames to not cancel tasks and be processed properly.
+
 ## [0.0.39] - 2024-07-23
 
 ### Fixed
